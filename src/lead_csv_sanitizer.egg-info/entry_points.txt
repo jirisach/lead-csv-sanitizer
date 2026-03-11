@@ -1,0 +1,2 @@
+[console_scripts]
+lead-sanitize = lead_csv_sanitizer.cli:app

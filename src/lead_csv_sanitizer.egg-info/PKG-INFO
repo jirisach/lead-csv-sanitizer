@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: lead-csv-sanitizer
+Version: 0.1.0
+Summary: Clean and standardize lead CSV files before CRM import.
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: phonenumbers
+Requires-Dist: typer
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Dynamic: license-file

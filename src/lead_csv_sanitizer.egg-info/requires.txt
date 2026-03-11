@@ -1,0 +1,6 @@
+pandas
+phonenumbers
+typer
+
+[dev]
+pytest

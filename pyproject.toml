@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lead-csv-sanitizer"
+version = "0.1.0"
+description = "Clean and standardize lead CSV files before CRM import."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas",
+    "phonenumbers",
+    "typer",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[project.scripts]
+lead-sanitize = "lead_csv_sanitizer.cli:app"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
