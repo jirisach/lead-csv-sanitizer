@@ -243,6 +243,8 @@ python -m lead_csv_sanitizer.cli samples/messy_leads.csv
 
 ## 📟 Example CLI Output
 
+![CLI Example](cli-example.png)
+
 ```
 Lead CSV Sanitizer
 Rows loaded: 4
