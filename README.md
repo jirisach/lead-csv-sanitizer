@@ -1,4 +1,4 @@
-\# 🧹 Lead CSV Sanitizer
+# 🧹 Lead CSV Sanitizer
 
 
 
@@ -6,27 +6,26 @@ A CLI tool that prevents dirty lead data from entering your CRM.
 
 
 
-!\[Python](https://img.shields.io/badge/python-3.11-blue)
-
-!\[License](https://img.shields.io/badge/license-MIT-green)
-
-!\[Status](https://img.shields.io/badge/status-active-success)
+![Python](https://img.shields.io/badge/python-3.11-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-active-success)
 
 
 
-Part of the \*\*Lead Entry Guard\*\* ecosystem.
+Part of the **Lead Entry Guard** ecosystem.
 
 
 
-\*\*Lead CSV Sanitizer\*\* is a local-first Python tool for cleaning, validating, and preparing lead CSV files before CRM import.
+
+**Lead CSV Sanitizer** is a local-first Python tool for cleaning, validating, and preparing lead CSV files before CRM import.
 
 
 
-It is designed for \*\*RevOps, Sales Ops, CRM admins, and automation builders\*\* who want safer, cleaner, and more reliable lead imports.
+It is designed for **RevOps, Sales Ops, CRM admins, and automation builders** who want safer, cleaner, and more reliable lead imports.
 
 
 
-\## 🚨 The Problem
+## 🚨 The Problem
 
 
 
@@ -34,15 +33,15 @@ Lead spreadsheets exported from marketing tools, scraping tools, or manual lists
 
 
 
-\- invalid emails
+- invalid emails
 
-\- broken phone numbers
+- broken phone numbers
 
-\- inconsistent column names
+- inconsistent column names
 
-\- duplicate contacts
+- duplicate contacts
 
-\- missing required fields
+- missing required fields
 
 
 
@@ -50,87 +49,87 @@ Importing these directly into CRM systems often results in:
 
 
 
-\- failed imports
+- failed imports
 
-\- duplicate contacts
+- duplicate contacts
 
-\- broken reporting
+- broken reporting
 
-\- messy CRM data
-
-
-
-\## ✅ The Solution
+- messy CRM data
 
 
 
-\*\*Lead CSV Sanitizer\*\* creates a deterministic pipeline that:
+## ✅ The Solution
 
 
 
-1\. Cleans the dataset
-
-2\. Validates key fields
-
-3\. Detects duplicates
-
-4\. Flags data issues
-
-5\. Generates CRM-ready output
+**Lead CSV Sanitizer** creates a deterministic pipeline that:
 
 
 
-All \*\*locally\*\*, with \*\*no external API calls\*\*.
+1. Cleans the dataset
+
+2. Validates key fields
+
+3. Detects duplicates
+
+4. Flags data issues
+
+5. Generates CRM-ready output
 
 
 
-\## ⚙️ Features
+All **locally**, with **no external API calls**.
 
 
 
-\- ✔ Column normalization
-
-\- ✔ Whitespace cleanup
-
-\- ✔ Email validation
-
-\- ✔ Phone normalization (E.164 format)
-
-\- ✔ Duplicate detection
-
-\- ✔ Issue flags per row
-
-\- ✔ Missing field audit
-
-\- ✔ CRM-ready export
-
-\- ✔ JSON summary report
-
-\- ✔ Data health score
-
-\- ✔ Dataset size guard
-
-\- ✔ Processing time metrics
-
-\- ✔ Local-first processing (privacy friendly)
+## ⚙️ Features
 
 
 
-\## 📊 Data Health Score
+- ✔ Column normalization
+
+- ✔ Whitespace cleanup
+
+- ✔ Email validation
+
+- ✔ Phone normalization (E.164 format)
+
+- ✔ Duplicate detection
+
+- ✔ Issue flags per row
+
+- ✔ Missing field audit
+
+- ✔ CRM-ready export
+
+- ✔ JSON summary report
+
+- ✔ Data health score
+
+- ✔ Dataset size guard
+
+- ✔ Processing time metrics
+
+- ✔ Local-first processing (privacy friendly)
 
 
 
-The tool calculates a \*\*Data Health Score\*\* based on:
+## 📊 Data Health Score
 
 
 
-\- valid emails
+The tool calculates a **Data Health Score** based on:
 
-\- valid phone numbers
 
-\- duplicate rate
 
-\- missing required fields
+- valid emails
+
+- valid phone numbers
+
+- duplicate rate
+
+- missing required fields
 
 
 
@@ -139,20 +138,18 @@ Example output:
 
 
 ```
-
 Data health score: 73%
-
 ```
 
 
 
-This provides a quick overview of \*\*CRM data quality\*\*.
+This provides a quick overview of **CRM data quality**.
 
 
 
 
 
-\## 🏗 Project Structure
+## 🏗 Project Structure
 
 
 
@@ -164,13 +161,13 @@ lead-csv-sanitizer/
 
 ├─ src/
 
-│  └─ lead\_csv\_sanitizer/
+│  └─ lead_csv_sanitizer/
 
 │     ├─ cli.py
 
 │     ├─ loader.py
 
-│     ├─ column\_mapper.py
+│     ├─ column_mapper.py
 
 │     ├─ cleaner.py
 
@@ -198,7 +195,7 @@ lead-csv-sanitizer/
 
 
 
-\## 🚀 Installation
+## 🚀 Installation
 
 
 
@@ -230,7 +227,7 @@ python -m pip install -e .
 
 
 
-\## ▶ Usage
+## ▶ Usage
 
 
 
@@ -240,13 +237,24 @@ Run the sanitizer on a CSV file:
 
 ```bash
 
-python -m lead\_csv\_sanitizer.cli samples\\messy\_leads.csv
+python -m lead_csv_sanitizer.cli samples/messy_leads.csv
 
 ```
 
+## 📟 Example CLI Output
+
+```
+Lead CSV Sanitizer
+Rows loaded: 4
+Valid emails: 3/4
+Valid phones: 3/4
+Duplicates detected: 2
+Data health score: 73%
+Processing time: 2.42s
+```
 
 
-\## 📁 Outputs
+## 📁 Outputs
 
 
 
@@ -258,17 +266,17 @@ The tool generates several files inside the `output/` folder:
 
 |-----|-----|
 
-| cleaned\_leads.csv | Full dataset with audit columns |
+| cleaned_leads.csv | Full dataset with audit columns |
 
-| crm\_import\_ready.csv | Simplified dataset ready for CRM import |
+| crm_import_ready.csv | Simplified dataset ready for CRM import |
 
-| rejected\_rows.csv | Rows rejected due to missing identifiers |
+| rejected_rows.csv | Rows rejected due to missing identifiers |
 
-| sanitizer\_report.json | Data quality metrics |
+| sanitizer_report.json | Data quality metrics |
 
 
 
-\## 🧪 Testing
+## 🧪 Testing
 
 
 
@@ -284,21 +292,21 @@ pytest
 
 
 
-\## 🔐 Privacy \& Security
+## 🔐 Privacy & Security
 
 
 
-This tool is built with \*\*privacy-first principles\*\*.
+This tool is built with **privacy-first principles**.
 
 
 
-\- ✔ Local processing only
+- ✔ Local processing only
 
-\- ✔ No external APIs
+- ✔ No external APIs
 
-\- ✔ No data uploads
+- ✔ No data uploads
 
-\- ✔ Deterministic outputs
+- ✔ Deterministic outputs
 
 
 
@@ -306,15 +314,15 @@ Best practices:
 
 
 
-\- never commit real customer data
+- never commit real customer data
 
-\- never commit output files with PII
+- never commit output files with PII
 
-\- use sample data in the repository
+- use sample data in the repository
 
 
 
-\## 🎯 Use Cases
+## 🎯 Use Cases
 
 
 
@@ -322,15 +330,15 @@ Typical users include:
 
 
 
-\- RevOps engineers
+- RevOps engineers
 
-\- Sales Operations teams
+- Sales Operations teams
 
-\- CRM administrators
+- CRM administrators
 
-\- Automation consultants
+- Automation consultants
 
-\- Data quality engineers
+- Data quality engineers
 
 
 
@@ -338,17 +346,17 @@ Common scenarios:
 
 
 
-\- preparing CSV imports for CRM
+- preparing CSV imports for CRM
 
-\- auditing marketing lead lists
+- auditing marketing lead lists
 
-\- cleaning scraped datasets
+- cleaning scraped datasets
 
-\- preventing duplicate CRM contacts
+- preventing duplicate CRM contacts
 
 
 
-\## 🛣 Roadmap
+## 🛣 Roadmap
 
 
 
@@ -356,19 +364,19 @@ Potential future improvements:
 
 
 
-\- batch processing for multiple CSV files
+- batch processing for multiple CSV files
 
-\- richer data quality reports
+- richer data quality reports
 
-\- configurable required fields
+- configurable required fields
 
-\- CRM-specific export formats
+- CRM-specific export formats
 
-\- desktop packaging for non-technical users
+- desktop packaging for non-technical users
 
 
 
-\## 👨‍💻 Author
+## 👨‍💻 Author
 
 
 
@@ -376,7 +384,9 @@ Built by Jiří Šach
 
 Automation \& Data Workflow Builder
 
+## ⭐ Support
 
+If you find this project useful, consider starring the repository.
 
 
 
