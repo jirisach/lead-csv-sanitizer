@@ -9,6 +9,7 @@ A CLI tool that prevents dirty lead data from entering your CRM.
 ![Python](https://img.shields.io/badge/python-3.11-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Status](https://img.shields.io/badge/status-active-success)
+![Tests](https://github.com/jirisach/lead-csv-sanitizer/actions/workflows/tests.yml/badge.svg)
 
 
 
@@ -245,7 +246,7 @@ python -m lead_csv_sanitizer.cli samples/messy_leads.csv
 
 ![CLI Example](cli-example.png)
 
-```
+```bash
 Lead CSV Sanitizer
 Rows loaded: 4
 Valid emails: 3/4
